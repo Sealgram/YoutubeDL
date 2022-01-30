@@ -1,4 +1,3 @@
-from re import X
 from pytube import YouTube
 import sys
 
