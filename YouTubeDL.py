@@ -11,7 +11,7 @@ def download_video(link):
         yt = YouTube(link)
     except:
         print("That is an invalid youtube link.")
-        print("Usage: ytmp3.py [YouTube link]")
+        print("Usage: YouTubeDL.py [YouTube link]")
         exit(1)
     else:
         stream = yt.streams.filter(file_extension='mp4', type="video", adaptive="True")[0]
@@ -24,7 +24,7 @@ def download_video(link):
 def main():
     args = sys.argv[1:]
     if len(sys.argv) != 2:
-        print("Usage: ytmp3.py [YouTube link]")
+        print("Usage: YouTube.py [YouTube link]")
         exit(1)
     title = download_video(sys.argv[1])
     print(f"Successfully downloaded {title} from YouTube.\n")
